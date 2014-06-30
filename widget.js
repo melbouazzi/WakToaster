@@ -7,7 +7,7 @@ WAF.define('WakToaster', ['waf-core/widget'], function(widget) {
 //                message: 'Hello'
 //            });
 		     	    
-		 	this.render();
+		 	/*this.render();
 		    
 		    this.toastrType.onChange(this.render); 
 		    this.title.onChange(this.render);
@@ -16,7 +16,7 @@ WAF.define('WakToaster', ['waf-core/widget'], function(widget) {
 			this.timeOut.onChange(this.render);
 			this.showDuration.onChange(this.render);
 			this.hideDuration.onChange(this.render);
-			this.closeButton.onChange(this.render);
+			this.closeButton.onChange(this.render);*/
         }
         ,
         
@@ -42,7 +42,7 @@ WAF.define('WakToaster', ['waf-core/widget'], function(widget) {
         	defaultValue: false
         })
         
-        ,
+        /*,
         
         toastrType: widget.property({
             type: "enum",
@@ -53,7 +53,7 @@ WAF.define('WakToaster', ['waf-core/widget'], function(widget) {
             	error:'Error'
             },
             bindable: false   
-        })
+        })*/
        
         ,
        
@@ -94,7 +94,7 @@ WAF.define('WakToaster', ['waf-core/widget'], function(widget) {
         	defaultValue: 300
         })
     
-    	,
+    	/*,
     	
     	render: function() {
            var toastrType = this.toastrType();
@@ -117,6 +117,30 @@ WAF.define('WakToaster', ['waf-core/widget'], function(widget) {
 			};
 			
            toastr[toastrType](message, title, options);
+        }*/
+		,
+        
+        show: function(type){
+           //var toastrType = this.toastrType();
+           var title = this.title() == '' ? 'title' : this.title();
+           var message = this.message() == '' ? '' : this.message();
+           var position = this.position().replace('_','-').replace('_','-').replace('_','-'); // replace '_' by '-' ( positionClass: toast-bottom-full-width )
+           var options = {
+				"closeButton": this.closeButton(),
+				"debug": false,
+				"positionClass": position,
+				"onclick": null,
+				"showDuration": this.showDuration(),
+				"hideDuration": this.hideDuration(),
+				"timeOut": this.timeOut(),
+				"extendedTimeOut": "1000",
+				"showEasing": "swing",
+				"hideEasing": "linear",
+				"showMethod": "fadeIn",
+				"hideMethod": "fadeOut"
+			};
+			
+           toastr[type](message, title, options);
         }
         
     });

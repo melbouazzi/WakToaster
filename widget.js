@@ -42,7 +42,7 @@ WAF.define('WakToaster', ['waf-core/widget'], function(widget) {
         	defaultValue: false
         })
         
-        /*,
+        ,
         
         toastrType: widget.property({
             type: "enum",
@@ -53,7 +53,7 @@ WAF.define('WakToaster', ['waf-core/widget'], function(widget) {
             	error:'Error'
             },
             bindable: false   
-        })*/
+        })
        
         ,
        
@@ -120,8 +120,8 @@ WAF.define('WakToaster', ['waf-core/widget'], function(widget) {
         }*/
 		,
         
-        show: function(type){
-           //var toastrType = this.toastrType();
+        show: function(){
+           var type = this.toastrType();
            var title = this.title() == '' ? 'title' : this.title();
            var message = this.message() == '' ? '' : this.message();
            var position = this.position().replace('_','-').replace('_','-').replace('_','-'); // replace '_' by '-' ( positionClass: toast-bottom-full-width )

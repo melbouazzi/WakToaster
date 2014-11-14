@@ -1,16 +1,16 @@
 ## Custom Widget for [Wakanda](http://wakanda.org)
-The WakToaster widget allows user to diplay 4 alert types : success, info, warning and error.
+The WakToaster widget allows user to diplay notifications. It has 4 types : success, info, warning and error notification.
 
 ### Properties
 This widget has the following properties:
 
-* Title: alert title
-* Message: alert message
-* CloseButton: show/hide alert close button
-* Position: set alert postion; there are 6 positions ( Top right, top left, top full width, bottom right, bottom left, bottom full width )
-* TimeOut: alert time out
-* HideDuration: alert hide duration
-* ShowDuration: alert show duration
+* Title: notification title
+* Message: notification message
+* CloseButton: show/hide notification close button
+* Position: set notification postion; there are 6 positions ( Top right, top left, top full width, bottom right, bottom left, bottom full width )
+* TimeOut: notification time out
+* HideDuration: notification hide duration
+* ShowDuration: notification show duration
 
 ### How it works
 

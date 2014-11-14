@@ -8,6 +8,7 @@ This widget has the following properties:
 * Message: notification message
 * CloseButton: show/hide notification close button
 * Position: set notification postion; there are 6 positions ( Top right, top left, top full width, bottom right, bottom left, bottom full width )
+* Type: choose notification type : sucess, info, warning, error.
 * TimeOut: notification time out
 * HideDuration: notification hide duration
 * ShowDuration: notification show duration
